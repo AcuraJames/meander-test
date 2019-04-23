@@ -1,0 +1,19 @@
+.big-text {
+    padding: 100px 333px;
+    
+    &__title {
+        max-width: 840px;
+        margin: 0 auto;
+        
+        font-size: 3rem;
+    }
+
+    &__paragraph {
+        max-width: 840px;
+        margin: 0 auto;
+        margin-top: 25px;	
+        line-height: 26px;
+        font-size: 18px;
+        color: #4E4D53;
+    }
+}

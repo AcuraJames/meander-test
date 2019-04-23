@@ -1,0 +1,49 @@
+.advantages {
+    width: 100%;
+    min-height: 600px;
+    max-height: auto;
+    padding: 120px;
+    text-align: center;
+    background-color: #F7F5FA;
+
+    &__title {
+        font-size: 3rem;
+        margin-bottom: 60px;
+    }
+    
+    .pros {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: left;
+        
+        &-block {
+            min-width: 30%;
+            margin-bottom: 60px;
+
+            &__title {
+                margin-top: 30px;
+                font-size: 1.25rem;
+                @include bold;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    margin: 25px 0;
+                    width: 25px;
+                    height: 2px;
+                    background: #F47821;
+                }
+            }
+
+            &__description {
+                @include medium;
+                line-height: 26px;
+                color: #4E4D53;
+            }
+        }
+    }
+}
+

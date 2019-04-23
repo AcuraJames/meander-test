@@ -1,0 +1,12 @@
+.container {
+    max-width: 100%;
+    overflow: hidden;
+
+    &__rectangle {
+        width: 100vw;
+        height: 460px;
+        margin: auto;
+        position: relative;
+        background-color: #F7F5FA;
+    }
+}
