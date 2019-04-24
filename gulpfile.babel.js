@@ -6,7 +6,9 @@ import autoprefixer from 'gulp-autoprefixer'
 import del from 'del'
 import {argv} from 'yargs'
 import _if from 'gulp-if' 
+import imagemin from 'gulp-imagemin'
 import cssnano from 'gulp-cssnano'
+
 import {create as bsCreate} from 'browser-sync'
 
 const browserSync = bsCreate()
@@ -36,15 +38,6 @@ gulp.task('index', () => {
         .pipe(gulp.dest('public'))
 })
 
-// gulp.task('js', () => {
-//     return gulp.src('src/js/**/*.js')
-//         .pipe(_if(prod, babel({
-//             presets: ['@babel/env']
-//         })))
-//         .pipe(_if(prod, uglify()))
-//         .pipe(gulp.dest('public/js'))
-// })
-
 gulp.task('fonts', () => {
     return gulp.src('src/styles/fonts/*.*')
         .pipe(gulp.dest('public/fonts'))
@@ -52,10 +45,10 @@ gulp.task('fonts', () => {
 
 gulp.task('img', () => {
     return gulp.src('src/img/**/*.*')
-        // .pipe(_if(prod, imagemin([
-        //     imagemin.jpegtran({progressive: true}),
-        //     imagemin.optipng({optimizationLevel: 5})
-        // ])))
+        .pipe(_if(prod, imagemin([
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 5})
+        ])))
         .pipe(gulp.dest('public/img'))
 })
 

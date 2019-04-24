@@ -39,8 +39,27 @@
         margin: 0 auto;
         display: flex;
         justify-content: center;
-        background-color: rgba(135, 135, 135, 0.05);
-        border-radius: 50px;
+        position: relative;
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 3px;
+            left: 16px;
+            background-color: rgba(135, 135, 135, 0.05);
+            border-radius: 50px;
+            transition: .5s;
+        }
+        
+        &:hover, &:active {
+            &::before {
+                width: 235px;
+            }
+        }
 
         span {
             margin-right: 10px;

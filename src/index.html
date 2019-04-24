@@ -115,26 +115,26 @@
         </div>
         <div class="footer">
             <p class="footer__title">Теперь расскажите о себе</p>
-            <div class="form">
+            <form class="form" id="form">
                 <div class="form__item">
                     <span class="step">1</span>
                     <div class="field">
                         <p class="title">Фамилия и имя</p>
-                        <input type="text" placeholder="Сидоров Александр">
+                        <input required type="text" placeholder="Сидоров Александр">
                     </div>
                 </div>
                 <div class="form__item">
                     <span class="step">2</span>
                     <div class="field">
                         <p class="title">Электронная почта</p>
-                        <input type="email" placeholder="Sidorov@yandex.ru">
+                        <input required type="email" placeholder="Sidorov@yandex.ru">
                     </div>
                 </div>
                 <div class="form__item">
                     <span class="step">3</span>
                     <div class="field">
                         <p class="title">Телефон</p>
-                        <input type="phone" placeholder="+7 (999)-328-14-20">
+                        <input required type="phone" id="phone" placeholder="+7 (999)-328-14-20">
                     </div>
                 </div>
                 <div class="form__item">
@@ -143,12 +143,24 @@
                         <p class="title">Какой деятельностью, не связанной с текущими проектами, вы бы хотели
                             заниматься в рабочее время?
                         </p>
-                        <textarea placeholder="Свой проект по созданию универсальной инфраструктуры строительства"></textarea>
+                        <textarea required placeholder="Свой проект по созданию универсальной инфраструктуры строительства"></textarea>
                     </div>
                 </div>
-                <div class="form__submit">Отправить</div>
-            </div>
+                <button type="submit" class="form__submit">отправить</button>
+            </form>
         </div>
     </div>
+    <script src="https://unpkg.com/imask"></script>
+    <script>
+        const phone = document.getElementById('phone')
+
+        phone.addEventListener('focus', function(){
+            this.value = '+7'
+        })
+
+        const options = {mask: '+{7}(000)000-00-00'}
+        const mask = IMask(phone, options)
+    </script>
+
 </body>
 </html>

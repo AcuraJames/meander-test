@@ -105,8 +105,9 @@
         }
 
         &__submit {
-            max-width: 547px;
+            width: 547px;
             height: 54px;
+            display: block;
             line-height: 54px;
             margin: auto;
             margin-top: 60px;
@@ -116,11 +117,12 @@
             @include bold;
             color: #F47821;
             background-color: #fff;
+            border: none;
             border-radius: 50px;
             transition: .3s;
             cursor: pointer;
             user-select: none;
-            outline: none;
+            -webkit-tap-highlight-color: transparent;
 
             &:hover {
                 color: #fff;
