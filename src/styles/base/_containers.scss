@@ -8,5 +8,25 @@
         margin: auto;
         position: relative;
         background-color: #F7F5FA;
+
+        @media (max-width: 996px) {
+            height: 550px;    
+        }
+
+        @media (max-width: 540px) {
+            height: 700px;
+        }
+
+        @media (max-width: 468px) {
+            height: 850px;
+        }
+
+        @media (max-width: 406px) {
+            height: 550px;
+        }
+
+        @media (max-width: 342px) {
+            height: 700px;
+        }
     }
 }

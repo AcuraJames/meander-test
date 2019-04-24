@@ -1,6 +1,14 @@
 .hero-bg {
     height: 600px;
+    background-color: #F7F5FA;
     background-image: url('../img/hero_bg.png');
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center center;
+
+    @media (max-width: 760px) {
+        overflow-y: hidden;
+        background-size: 760px;
+        background-position: top right;
+    }
 }

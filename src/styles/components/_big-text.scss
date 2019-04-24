@@ -1,11 +1,23 @@
 .big-text {
     padding: 100px 333px;
+
+    @media (max-width: 1200px) {
+        padding: 100px 120px;
+    }
+
+    @media (max-width: 760px) {
+        padding: 100px 30px;
+    }
     
     &__title {
         max-width: 840px;
-        margin: 0 auto;
-        
+        margin: 0 auto;    
         font-size: 3rem;
+
+        @media (max-width: 1200px) {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 
     &__paragraph {
@@ -15,5 +27,10 @@
         line-height: 26px;
         font-size: 18px;
         color: #4E4D53;
+
+        @media (max-width: 1200px) {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 }
